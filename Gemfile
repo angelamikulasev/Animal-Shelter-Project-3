@@ -27,6 +27,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'bcrypt'
+gem 'haml-rails'
+gem 'haml'
 
 group :development do
   gem 'pry-rails'

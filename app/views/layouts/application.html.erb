@@ -8,7 +8,30 @@
 </head>
 <body>
 
-<%= yield %>
+  <div class="row">
+    <h1>Animal Shelter</h1>
+    <% if @current_user.present? %>
+      <li><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'Adopt', animals_path %></li>
+      <li><%= link_to 'FAQ', faq_path %></li><li>
+      <li><%= link_to 'Contact', contact_path %></li>
+      <li><%= link_to 'Edit profile', edit_user_path(@current_user) %></li>
+      <li><%= link_to "Sign out #{@current_user.firstname}", new_session_path, method: :delete, data: { confirm: 'Are you sure?'} %></li>
+    <% else %>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Sign up', new_user_path %></li>
+        <li><%= link_to 'Login', new_session_path %></li>
+        <li><%= link_to 'Shop', animals_path %></li>
+        <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'FAQ', faq_path %></li>
+        <li><%= link_to 'Contact', contact_path %></li>
+      </ul>
+    <% end %>
+
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>
