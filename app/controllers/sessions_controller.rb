@@ -1,15 +1,14 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
   def new
   end
 
   def create
-    user = User.find_by(firstname: params[:firstname])
+    user = User.where(:email => params[:email]).first
     if user.present? && user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to root_path
     else
-      @error = "Login Incorrect"
-      redirect_to new_session_path
+      redirect_to login_path, :flash => {:error => 'Incorrect login'}
     end
   end
 

@@ -1,0 +1,17 @@
+body {
+  font-family: helvetica;
+}
+
+h1 {
+  margin: auto;
+}
+
+div.container {
+  margin: 0px;
+  /*max-width: 960px;*/
+}
+
+.row ul li {
+  list-style: none;
+  display: inline;
+}
