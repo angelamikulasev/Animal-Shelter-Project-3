@@ -17,7 +17,7 @@
 #
 
 class Animal < ActiveRecord::Base
-  belongs to a category
+  belongs_to :category
   belongs_to :adoptee, class_name: "User"
   belongs_to :adopter, class_name: "User"
 

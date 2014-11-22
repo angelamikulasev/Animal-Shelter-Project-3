@@ -15,3 +15,16 @@ div.container {
   list-style: none;
   display: inline;
 }
+
+#collapse-menu.collapse {
+  display: block;
+}
+
+a {
+  background: transparent;
+  letter-spacing: 1px;
+  margin: 12px;
+}
+
+
+
