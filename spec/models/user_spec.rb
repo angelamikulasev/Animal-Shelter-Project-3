@@ -1,11 +1,19 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  firstname       :string(255)
+#  lastname        :string(255)
+#  email           :string(255)
+#  password_digest :text
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
 require 'rails_helper'
 
 RSpec.describe User, :type => :model do
   it { should have_many(:adoptions) }
-  it { is_expected.to have_many(:adoptees, class_name: "Animal", foreign_key: "adoptee_id") }
-  it { is_expected.to have_many(:adopters, class_name: "Animal", foreign_key: "adopter_id") }
+  it { should have_many(:surrenders) }
 end
-
-  # has_many :adoptions
-  # has_many :adoptees, class_name: "Animal", foreign_key: "adoptee_id"
-  # has_many :adopters, class_name: "Animal", foreign_key: "adopter_id"

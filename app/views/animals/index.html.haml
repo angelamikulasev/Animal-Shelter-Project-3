@@ -8,7 +8,24 @@
         .animal_box
           .animal-image
             = image_tag animal.image
-          %h4
-            = link_to animal.name, animal_path(animal)
-          %p.animal-info
-            #{animal.gender}
+            %h4
+              = link_to animal.name, animal_path(animal)
+            %p.animal-info
+              #{animal.gender}
+
+/ %table
+/   %tr
+/     %th Animal Name
+/     %th About Me
+/   %tr
+/     %td
+/       %h4
+/       - @animals.each do |animal|
+/         = link_to @animals.name, animal_path(animal)
+/     %td 
+/       - @animals.each do |animal|
+/         .animal_box
+/           .animal-image
+/             = image_tag animal.image
+/           %p.animal-info
+/             #{animal.gender}

@@ -1,0 +1,37 @@
+= form_for @animal do |f|
+  - if @animal.errors.any?
+    %ul
+      - @animal.errors.full_messages.each do |msg|
+        %li= msg
+
+  %div.form-group
+    = f.label :name
+    = f.text_field :name, :autofocus => true, :class => 'form-control'
+
+  %div.form-group
+    = f.label :about_me
+    = f.text_field :about_me, :class => 'form-control'
+
+  %div.form-group
+    = f.label :species
+    = f.text_field :species, :class => 'form-control'
+
+  %div.form-group
+    // ANIMAL::GENDER
+    = f.label :gender
+    = f.text_field :gender, :class => 'form-control'
+
+  %div.form-group
+    = f.label :ideal_home
+    = f.text_field :ideal_home, :class => 'form-control'
+
+  %div.form-group
+    = f.label :child_friendly
+    = f.text_field :child_friendly, :class => 'form-control'
+
+  %div.form-group
+    = f.label :image
+    = f.text_field :image, :class => 'form-control'
+
+  %label
+  = f.submit

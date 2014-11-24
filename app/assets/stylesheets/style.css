@@ -1,14 +1,10 @@
 body {
   font-family: helvetica;
+  margin: 0px;
 }
 
 h1 {
   margin: auto;
-}
-
-div.container {
-  margin: 0px;
-  /*max-width: 960px;*/
 }
 
 #services {
@@ -44,8 +40,17 @@ ul {
   background-image: url(https://newevolutiondesigns.com/images/freebies/dog-wallpaper-12.jpg);
   background-size: cover;
   background-position: center;
-  margin-top: -52px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin-top: -100px;
 } 
+
+div.container {
+  padding: 0px;
+  /*margin: 0px;*/
+  /*max-width: 960px;*/
+}
 
 .navbar-default {
   background-color: rgba(248, 248, 248, 0.7);
@@ -57,7 +62,7 @@ ul {
   background-color: rgba(248, 248, 248, 0.7);
 } 
 
-.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+.span1, .span2, .span3 {
   position: relative;
   display: inline;
   float: left;
@@ -77,6 +82,12 @@ ul {
   width: 70px;
 }
 
+/*p img.arrow {
+  height: 70px;
+  width: 70px; 
+  @include animation(bounce 2s infinite); 
+}*/
+
 .span3 img.donate {
   width: 125px;
   height: 75px;
@@ -86,8 +97,55 @@ section {
   text-align: center;
 }
 
+table tr td {
+  border: 1px black solid;
+}
+
+.btn-default {
+  color: #333333;
+  border-color: #cccccc;
+  border: white 2px solid;
+}
+
 a:visited {
   color: #11b1ad;
 }
 
+div.animal-image {
+  height: 100%;
+  width: 150px;
+  display: inline-table;
+
+}
+
+.animal-image img {
+  width: 330px;
+  height: auto;
+  padding-left: 10px; 
+  padding-right: 10px;
+  padding-bottom: 24px;
+}
+
+.animal_box {
+  display: inline-table;
+}
+
+.animal-image {
+  width: 400px;
+  height: auto;
+}
+
+.animal-image img {
+  width: 330px;
+  height: auto;
+  padding-left: 10px; 
+  padding-right: 10px;
+  padding-bottom: 24px;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding-right: 113px;
+  padding-left: 14px;
+}
 

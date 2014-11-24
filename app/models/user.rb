@@ -12,9 +12,10 @@
 #
 
 class User < ActiveRecord::Base
-  has_many :adoptions
-  has_many :adoptees, class_name: "Animal", foreign_key: "adoptee_id"
-  has_many :adopters, class_name: "Animal", foreign_key: "adopter_id"
+  #has_many :adoptions, class_name: "Animal"
+
+  has_many :adoptions, class_name: "Animal", :foreign_key => 'adopter_id'
+  has_many :surrenders, class_name: "Animal", :foreign_key => 'adoptee_id'
 
   # validates :email, :uniqueness => true
   validates :email, confirmation: true

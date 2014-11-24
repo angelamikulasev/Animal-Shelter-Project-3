@@ -1,8 +1,9 @@
 .show-animal
   %h2
     =@animal.name
+  .animal-info
   %ul
-  %li
+  %li 
     =@animal.about_me
   %li
     =@animal.ideal_home
@@ -12,8 +13,16 @@
     =@animal.gender
   %li
     =@animal.child_friendly
-  %li
+
     .animal-image
     %img{:src => @animal.image}
 
-=link_to "Go Back", :back
+  - if @animal.adopted?
+    %p This animal has been adopted :)
+  - else
+    = form_for @animal, url: adopt_animal_path(@animal), method: 'patch' do
+      = submit_tag 'Adopt me' 
+
+= link_to "Go Back", animals_path
+
+

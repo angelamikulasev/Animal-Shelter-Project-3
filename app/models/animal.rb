@@ -18,14 +18,27 @@
 
 class Animal < ActiveRecord::Base
   belongs_to :category
-  belongs_to :adoptee, class_name: "User"
-  belongs_to :adopter, class_name: "User"
+
+  belongs_to :adoptee, class_name: "User" # , primary_key: "adoptee_id"
+  belongs_to :adopter, class_name: "User" # , primary_key: "adopter_id"
 
   validates :name, presence: true
   validates :about_me, presence: true
   validates :ideal_home, presence: true
-  validates :species, presence: true
-  validates :gender, presence: true
-  validates :child_friendly, presence: true
-  
+
+  SPECIES = %w[Dog Cat]
+  validates :species, inclusion: { in: SPECIES }
+
+  GENDER = %w[Male Female]
+  validates :gender, inclusion: { in: GENDER }
+
+  validates :child_friendly, inclusion: { in: [true, false] }
+
+  def adopt! adopter
+    update adopter_id: adopter.id
+  end
+
+  def adopted?
+    return !adopter_id.nil?
+  end
 end

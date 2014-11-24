@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe SessionsController, :type => :controller do
   describe 'Login' do
     before do
-      User.create :email => "annie@annie.com", :password => "chicken" 
+      User.create! :firstname => 'Annie', :lastname => 'mik', :email => "annie@annie.com", :password => "chicken" 
     end
 
     describe 'let user login if details are valid' do
@@ -11,7 +11,7 @@ RSpec.describe SessionsController, :type => :controller do
         post :create, {email: "annie@annie.com", password: "chicken"}
       end 
 
-        it 'should redirect to root_path if valid' do  
+      it 'should redirect to root_path if valid' do  
         expect(response).to redirect_to root_path
       end
 
@@ -26,11 +26,11 @@ RSpec.describe SessionsController, :type => :controller do
     end
     describe 'if a user enters wrong information' do 
       before do 
-        post :create, {email: "annie@annie.com", password: "chicken"}
+        post :create, {email: "annie@annie.com", password: "chickens"}
       end
 
-      it 'should redirect to root path when password is incorrect' do
-        expect(response).to redirect_to login_path
+      it 'should redirect to new_session_path when password is incorrect' do
+        expect(response).to redirect_to new_session_path
       end
     end 
   end 

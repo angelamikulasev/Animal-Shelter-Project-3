@@ -1,15 +1,26 @@
 Rails.application.routes.draw do
-   root :to => 'pages#home'
+  root :to => 'pages#home'
 
-   resources :users, only: [:new, :create, :destroy, :edit, :update, :show]
-   resources :animals # , only: [:index, :show]
-   resources :categories
+  resources :users, except: [:index]
 
-   # resources :sessions, only: [:new, :create, :destroy]
+  # resource :user do
+  #   collection do
+  #     get :history
+  #   end
+  # end
 
-   get '/login' => 'sessions#new'
-   post '/login' => 'sessions#create'
-   delete '/login' => 'sessions#destroy'
+  resources :categories
+  resource :session, only: [:new, :create, :destroy]
+
+  resources :animals, except: [:destroy] do
+    member do
+      patch 'adopt'
+    end
+
+    collection do
+      get 'waiting_for_adoption', :path => 'waiting-for-adoption'
+    end
+  end
 
    get '/about' => 'pages#about'
    get '/faq' => 'pages#faq'
