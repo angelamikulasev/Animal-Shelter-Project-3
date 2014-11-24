@@ -11,9 +11,18 @@ div.container {
   /*max-width: 960px;*/
 }
 
+#services {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .row ul li {
   list-style: none;
   display: inline;
+}
+
+li {
+  list-style: none;
 }
 
 #collapse-menu.collapse {
@@ -26,5 +35,59 @@ a {
   margin: 12px;
 }
 
+ul {
+  list-style: none;
+}
+
+.carousel-inner {
+  height: 550px;
+  background-image: url(https://newevolutiondesigns.com/images/freebies/dog-wallpaper-12.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-top: -52px;
+} 
+
+.navbar-default {
+  background-color: rgba(248, 248, 248, 0.7);
+  border-color: #e7e7e7;
+  margin: 0px;
+}
+
+.navbar.navbar-default.navbar-static-top {
+  background-color: rgba(248, 248, 248, 0.7);
+} 
+
+.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+  position: relative;
+  display: inline;
+  float: left;
+}
+
+.span3 {
+  width: 280px;
+  padding: 20px;
+  border: 1px solid #dee0e0;
+  box-sizing: border-box;
+  margin: 20px;
+  height: 378px;
+}
+
+.span3 img {
+  height: 70px;
+  width: 70px;
+}
+
+.span3 img.donate {
+  width: 125px;
+  height: 75px;
+}
+
+section {
+  text-align: center;
+}
+
+a:visited {
+  color: #11b1ad;
+}
 
 

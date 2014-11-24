@@ -1,0 +1,19 @@
+.show-animal
+  %h2
+    =@animal.name
+  %ul
+  %li
+    =@animal.about_me
+  %li
+    =@animal.ideal_home
+  %li
+    =@animal.species
+  %li
+    =@animal.gender
+  %li
+    =@animal.child_friendly
+  %li
+    .animal-image
+    %img{:src => @animal.image}
+
+=link_to "Go Back", :back

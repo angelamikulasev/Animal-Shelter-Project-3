@@ -1,1 +1,14 @@
-index.html.haml
+.animals-index-heading
+  %h2
+    Animals
+.animals-index
+  %ul
+    %li
+      - @animals.each do |animal|
+        .animal_box
+          .animal-image
+            = image_tag animal.image
+          %h4
+            = link_to animal.name, animal_path(animal)
+          %p.animal-info
+            #{animal.gender}
