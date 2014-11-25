@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def adopt
   end
+
+  def pawswalk
+  end
 end

@@ -1,0 +1,15 @@
+=@user.firstname
+  =link_to 'Edit', edit_user_path(@user)
+  =link_to 'Delete', @user, :method => :delete, :data => { :confirm => 'Are you sure? This will delete all posts written for this country.' }
+  - if @user.animals.present?
+    %article
+      - @user.animals.each do |animal|
+        %header
+          %h1= link_to animal.name, animal
+          %h3
+            = animal.gender
+        %p
+          = animal.about_me
+      %hr.featurette-divider
+  - else
+    %p There are no animals to display.

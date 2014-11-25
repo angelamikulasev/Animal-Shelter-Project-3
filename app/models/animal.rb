@@ -26,7 +26,7 @@ class Animal < ActiveRecord::Base
   validates :about_me, presence: true
   validates :ideal_home, presence: true
 
-  SPECIES = %w[Dog Cat]
+  SPECIES = %w[Dog Cat Other]
   validates :species, inclusion: { in: SPECIES }
 
   GENDER = %w[Male Female]

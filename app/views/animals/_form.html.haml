@@ -19,7 +19,13 @@
   %div.form-group
     // ANIMAL::GENDER
     = f.label :gender
-    = f.text_field :gender, :class => 'form-control'
+    %p.gender
+      = f.label "Male"
+      = radio_button_tag :gender, "Male", value: 'checked', :class => 'form-control' 
+
+      = f.label "Female"
+      = radio_button_tag :gender, "Female", :class => 'form-control' 
+      //= f.text_field :gender, :class => 'form-control'
 
   %div.form-group
     = f.label :ideal_home

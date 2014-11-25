@@ -1,10 +1,17 @@
 $(document).ready (function () {
-    $('.carousel-inner').fadeIn(3000);
+    $('.carousel-inner').hide().fadeIn(3000);
+    $('.span3').hide().fadeIn(3000);
 
-    function doAnimation() {
-        $(".span3").effect("bounce", {time: 2}, 300, doAnimation);
-    }
-    doAnimation();
-
+    $('.animal-image').hover(function () {
+        $(this).stop().animate({
+            opacity: .4
+        }, 200);
+        $('animal-info').removeClass('hide');
+    }, function () {
+        $(this).stop().animate({
+            opacity: 1
+        }, 500);
+        $('animal-info').addClass('hide');
+    });
 });
 
