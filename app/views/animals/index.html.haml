@@ -6,7 +6,7 @@
     %li
       - @animals.each do |animal|
         .animal_box
-          .animal-image{:style => "background-image:url(#{ animal.image })"}
+          .animal-image{:style => "background-image:url(#{ animal.avatar })"}
             /= image_tag animal.image
             %div.info
               %h4.animal-name

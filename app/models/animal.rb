@@ -20,7 +20,7 @@
 
 class Animal < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
-  
+
   belongs_to :category
 
   belongs_to :adoptee, class_name: "User" # , primary_key: "adoptee_id"

@@ -7,7 +7,7 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = current_user.surrenders.new animal_params
-
+   binding.pry
     if @animal.save
       # Resque.enqueue(AvatarProcessor, @animal.id, @animal.key)
       redirect_to @animal, notice: 'Animal successfully created and waiting for adoption'
@@ -56,6 +56,6 @@ class AnimalsController < ApplicationController
   private
 
   def animal_params
-    params.require(:animal).permit(:name, :about_me, :ideal_home, :species, :gender, :child_friendly, :image)
+    params.require(:animal).permit(:name, :about_me, :ideal_home, :species, :gender, :child_friendly, :avatar, :avatar_cache)
   end
 end
