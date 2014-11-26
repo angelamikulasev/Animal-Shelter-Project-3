@@ -25,10 +25,10 @@
     = f.label :gender
     %p.gender
       = f.label "Male"
-      = radio_button_tag 'animal[gender]', "Male", value: 'checked', :class => 'form-control' 
+      = f.radio_button :gender, "Male", value: 'checked', :class => 'form-control' 
 
       = f.label "Female"
-      = radio_button_tag 'animal[gender]', "Female", :class => 'form-control' 
+      = f.radio_button :gender, "Female", :class => 'form-control' 
   %div.form-group
     = f.label :ideal_home
     = f.text_field :ideal_home, :class => 'form-control'
@@ -36,11 +36,11 @@
   %div.form-group
     = f.label :child_friendly
     %p.child-friendly
-    = f.label "Yes"
-    = radio_button_tag 'animal[child_friendly]', "Yes", value: 'checked', :class => 'form-control' 
+      = f.label "Yes"
+      = f.radio_button :child_friendly, "Yes", value: 'true', :class => 'form-control'
 
-    = f.label "No"
-    = radio_button_tag 'animal[child_friendly]', "No", :class => 'form-control'
+      = f.label "No"
+      = f.radio_button :child_friendly, "No", value: 'false', :class => 'form-control'
 
   %div.form-group
     = f.label :image

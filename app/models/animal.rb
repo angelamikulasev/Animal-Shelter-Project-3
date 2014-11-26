@@ -36,7 +36,7 @@ class Animal < ActiveRecord::Base
   GENDER = %w[Male Female]
   validates :gender, inclusion: { in: GENDER }
 
-  CHILD_FRIENDLY = %w[Yes No]
+  CHILD_FRIENDLY = [true, false]
   validates :child_friendly, inclusion: { in: CHILD_FRIENDLY }
 
   def adopt! adopter

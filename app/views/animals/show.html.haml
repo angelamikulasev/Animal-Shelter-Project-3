@@ -12,7 +12,7 @@
     =@animal.gender
   .col-md-7
     %h3 Child Friendly
-    =@animal.child_friendly
+    = @animal.child_friendly ? "Yes" : "No"
 
 .animal-image
   %img{:src => @animal.image}
