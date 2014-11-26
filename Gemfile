@@ -50,9 +50,12 @@ group :development, :test do
   gem 'meta_request' 
 end
 
+group :test do
   gem 'rspec-rails'
+  gem 'capybara'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
+  gem 'launchy'
 end
 
 # Use ActiveModel has_secure_password
