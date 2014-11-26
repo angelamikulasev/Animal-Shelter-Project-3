@@ -15,7 +15,7 @@
     =@animal.child_friendly
 
 .animal-image
-  %img{:src => @animal.avatar}
+  %img{:src => @animal.image}
   - if @animal.adopted?
     %h4 This animal under the process of being adopted
   - else
