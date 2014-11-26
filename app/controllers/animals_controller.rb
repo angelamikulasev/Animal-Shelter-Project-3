@@ -7,9 +7,8 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = current_user.surrenders.new animal_params
-   binding.pry
+
     if @animal.save
-      # Resque.enqueue(AvatarProcessor, @animal.id, @animal.key)
       redirect_to @animal, notice: 'Animal successfully created and waiting for adoption'
     else
       render :new
@@ -29,6 +28,7 @@ class AnimalsController < ApplicationController
     @animal = Animal.find params[:id]
   end
 
+
   def adopt
     @animal = Animal.find params[:id]
 
@@ -42,12 +42,9 @@ class AnimalsController < ApplicationController
   end
 
   def waiting_for_adoption
-    # @animals = if Animal.where adoptee_id: nil
-    # else
-    @animals = Animal.where adoptee_id: nil
+    @animals = Animal.where adopter_id: nil
 
     render :index
-    # end
   end
 
   def edit
@@ -56,6 +53,6 @@ class AnimalsController < ApplicationController
   private
 
   def animal_params
-    params.require(:animal).permit(:name, :about_me, :ideal_home, :species, :gender, :child_friendly, :avatar, :avatar_cache)
+    params.require(:animal).permit(:name, :about_me, :ideal_home, :species, :gender, :child_friendly, :image, :image_cache, :remote_image_url)
   end
 end
