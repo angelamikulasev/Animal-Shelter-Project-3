@@ -51,6 +51,11 @@
 
 
     <div class="container">
+      <% {:notice => 'info', :error => 'danger' }.each do |k,v| %>
+        <% if flash[k].present? %>
+         <div class="alert alert-<%= v %> row" role="alert"><%= flash[k] %></div>
+        <% end %>
+      <% end %>
       <%= yield %>
     </div>
   </div>
