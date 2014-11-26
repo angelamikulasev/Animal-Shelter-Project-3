@@ -1,3 +1,5 @@
+User.destroy_all
+
 annie = User.create!(
   firstname: 'Angela',
   lastname: 'Mikulasev',
@@ -14,9 +16,13 @@ addy = User.create!(
   password_confirmation: 'addy'
 )
 
+Category.destroy_all
+
 %w[Dogs Cats Other].each do |category|
   Category.create! name: category
 end
+
+Animal.destroy_all
 
 buddy = Animal.create!(
   adoptee_id: annie.id,
