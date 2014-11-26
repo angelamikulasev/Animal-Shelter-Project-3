@@ -114,10 +114,10 @@ a:visited {
 }
 
 div.animal-image {
-  height: 100%;
-  width: 150px;
-  display: inline-table;
-
+  height: 330px;
+  width: 330px;
+  display: inline-block;
+  background-size: cover;
 }
 
 .animal-image img {
@@ -126,6 +126,15 @@ div.animal-image {
   padding-left: 10px; 
   padding-right: 10px;
   padding-bottom: 24px;
+}
+
+.animal-image .info {
+  background-color: rgba(255,255,255,0.8);
+  padding: 1em 0;
+}
+
+.animal-image .info h4 {
+  margin-top: 0;
 }
 
 .animal_box {
@@ -155,8 +164,12 @@ ul.dropdown-menu {
   font-size: 30px;
 }
 
-.pawswalkbanner img {
+object {
+  padding-bottom: 20px;
+}
 
+.pawswalkbanner img {
+  
 }
 
 

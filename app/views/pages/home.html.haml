@@ -6,12 +6,11 @@
         %a.btn.btn-lg.btn-default{:href => "/animals", :role => "button"} All our animals
 / /.carousel
 %section#services
-  %h2 Get involved
   .animation-target
     %article.span3
       %img{:alt => "", :src => "http://upload.wikimedia.org/wikipedia/commons/0/0a/Paw_(Animal_Rights_symbol).png"}
         %h3
-          %a{:href => "http://upload.wikimedia.org/wikipedia/commons/0/0a/Paw_(Animal_Rights_symbol).png", :title => "Get Involved"} Get Involved
+          = link_to "Get Involved", pawswalk_path
         %p Some of the animals entering shelters need a little extra help before they are ready for adoption and their new forever homes. They may be too young, unwell, recovering from surgery, or may need training to improve their behaviour. Our foster care program helps these animals recover in a home environment until they’re ready to enter adoption.
     %article.span3
       %img{:alt => "", :src => "http://cdn.flaticon.com/png/256/33715.png"}

@@ -13,20 +13,22 @@
     = f.text_field :about_me, :class => 'form-control'
 
   %div.form-group
+
+    / %select{ :name => "animal[species]" }
+    /   %option{:species => "Cat"}= "Cat"
+    /   %option{:species => "animal[species]"}= "Dog" # 'animal[species]',"Dog", :class => 'form-control'
+    /   %option{:species => "animal[species]"}= "Other" # 'animal[species]',"Other", :class => 'form-control'
     = f.label :species
     = f.text_field :species, :class => 'form-control'
 
   %div.form-group
-    // ANIMAL::GENDER
     = f.label :gender
     %p.gender
       = f.label "Male"
-      = radio_button_tag :gender, "Male", value: 'checked', :class => 'form-control' 
+      = radio_button_tag 'animal[gender]', "Male", value: 'checked', :class => 'form-control' 
 
       = f.label "Female"
-      = radio_button_tag :gender, "Female", :class => 'form-control' 
-      //= f.text_field :gender, :class => 'form-control'
-
+      = radio_button_tag 'animal[gender]', "Female", :class => 'form-control' 
   %div.form-group
     = f.label :ideal_home
     = f.text_field :ideal_home, :class => 'form-control'

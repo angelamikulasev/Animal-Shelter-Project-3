@@ -33,15 +33,20 @@ class AnimalsController < ApplicationController
 
     if @animal.adopt! current_user
       redirect_to @animal, notice: 'Animal successfully adopted'
-    else
+    elsif
       redirect_to @animal, notice: 'Animal could not be adopted'
+    else
+      redirect_to new_session_path
     end
   end
 
   def waiting_for_adoption
+    # @animals = if Animal.where adoptee_id: nil
+    # else
     @animals = Animal.where adoptee_id: nil
 
     render :index
+    # end
   end
 
   private
