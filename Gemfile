@@ -33,6 +33,10 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'carrierwave'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
@@ -44,7 +48,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request' 
-  gem 'rails_12factor'
+end
 
   gem 'rspec-rails'
   gem 'shoulda-matchers'
