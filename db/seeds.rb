@@ -14,7 +14,7 @@ addy = User.create!(
   password_confirmation: 'addy'
 )
 
-%w[Dogs Cats Reptiles Rabbits].each do |category|
+%w[Dogs Cats Other].each do |category|
   Category.create! name: category
 end
 
@@ -26,7 +26,7 @@ buddy = Animal.create!(
   species: 'Dog',
   gender: 'Male',
   child_friendly: 'Yes',
-  image: 'http://a1.dspnimg.com/data/g/426128089239_2H1pNAoy_g.jpg',
+  remote_image_url: 'http://a1.dspnimg.com/data/g/426128089239_2H1pNAoy_g.jpg',
   category_id: Category.where(name: 'Dogs').first.id 
 )
 
@@ -40,7 +40,7 @@ lily = Animal.create!(
   species: 'Cat',
   gender: 'Female',
   child_friendly: 'Yes',
-  image: 'http://a1.dspnimg.com/data/l/3225228245989_68tEtJNp_l.jpg',
+  remote_image_url: 'http://a1.dspnimg.com/data/l/3225228245989_68tEtJNp_l.jpg',
   category_id: Category.where(name: 'Cats').first.id
 )
 
@@ -52,7 +52,7 @@ fluffy = Animal.create!(
   species: 'Dog',
   gender: 'Female',
   child_friendly: 'No',
-  image: 'http://www.seniorsandsilkies.org.au/uploads/1/8/7/9/18790170/6302818_orig.jpg',
+  remote_image_url: 'http://www.seniorsandsilkies.org.au/uploads/1/8/7/9/18790170/6302818_orig.jpg',
   category_id: Category.where(name: 'Dogs').first.id 
 )
 
@@ -64,7 +64,7 @@ bertie = Animal.create!(
   species: 'Dog',
   gender: 'Male',
   child_friendly: 'Yes',
-  image: 'http://www.seniorsandsilkies.org.au/uploads/1/8/7/9/18790170/7303565.png?455',
+  remote_image_url: 'http://www.seniorsandsilkies.org.au/uploads/1/8/7/9/18790170/7303565.png?455',
   category_id: Category.where(name: 'Dogs').first.id 
 )
 
@@ -76,6 +76,6 @@ josie = Animal.create!(
   species: 'Cat',
   gender: 'Female',
   child_friendly: 'No',
-  image: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQYogDLugINcBqsrcKs5q2x3vj7CZ4w5mQctcX4vc-OJxbek9ZF5w',
+  remote_image_url: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQYogDLugINcBqsrcKs5q2x3vj7CZ4w5mQctcX4vc-OJxbek9ZF5w',
   category_id: Category.where(name: 'Cats').first.id 
 )
