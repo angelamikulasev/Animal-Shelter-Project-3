@@ -9,6 +9,7 @@ class AnimalsController < ApplicationController
     @animal = current_user.surrenders.new animal_params
 
     if @animal.save
+      # Resque.enqueue(AvatarProcessor, @animal.id, @animal.key)
       redirect_to @animal, notice: 'Animal successfully created and waiting for adoption'
     else
       render :new
@@ -47,6 +48,9 @@ class AnimalsController < ApplicationController
 
     render :index
     # end
+  end
+
+  def edit
   end
 
   private

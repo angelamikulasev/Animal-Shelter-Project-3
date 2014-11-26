@@ -1,28 +1,27 @@
 .show-animal
-  %h2
-    =@animal.name
-  .animal-info
-  %ul
-  %li 
+  %h2.col-md-8 
+    =@animal.name 
+  .col-md-7
+    %h3 About Me
     =@animal.about_me
-  %li
+  .col-md-7
+    %h3 My Ideal Home
     =@animal.ideal_home
-  %li
-    =@animal.species
-  %li
+  .col-md-7
+    %h3 Gender
     =@animal.gender
-  %li
+  .col-md-7
+    %h3 Child Friendly
     =@animal.child_friendly
 
-    .animal-image
-    %img{:src => @animal.image}
-
+.animal-image
+  %img{:src => @animal.image}
   - if @animal.adopted?
-    %p This animal has been adopted :)
+    %h4 This animal under the process of being adopted
   - else
     = form_for @animal, url: adopt_animal_path(@animal), method: 'patch' do
       = submit_tag 'Adopt me' 
-
-= link_to "Go Back", animals_path
+.col-md-7
+  = link_to "Go Back", animals_path
 
 

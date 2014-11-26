@@ -35,11 +35,18 @@
 
   %div.form-group
     = f.label :child_friendly
-    = f.text_field :child_friendly, :class => 'form-control'
+    %p.child-friendly
+    = f.label "Yes"
+    = radio_button_tag 'animal[child_friendly]', "Yes", value: 'checked', :class => 'form-control' 
+
+    = f.label "No"
+    = radio_button_tag 'animal[child_friendly]', "No", :class => 'form-control'
 
   %div.form-group
     = f.label :image
-    = f.text_field :image, :class => 'form-control'
+    / = f.image_url :image, :class => 'form-control'
+    = form.file_field :files, multiple: true
+
 
   %label
   = f.submit

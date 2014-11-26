@@ -1,6 +1,7 @@
 $(document).ready (function () {
     $('.carousel-inner').hide().fadeIn(3000);
     $('.span3').hide().fadeIn(3000);
+    $('.pawswalkbanner').hide().fadeIn(2000);
 
     $('.animal-image').hover(function () {
         $(this).stop().animate({

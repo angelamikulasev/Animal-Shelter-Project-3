@@ -1,5 +1,5 @@
 =@user.firstname
-/ =link_to 'Edit', edit_user_path(@user)
+/=link_to 'Edit', edit_animal_path(@animal)
 / =link_to 'Delete', @user, :method => :delete, :data => { :confirm => 'Are you sure? ' }
 / = @user
 - if @user.present? && @user.adoptions.any?

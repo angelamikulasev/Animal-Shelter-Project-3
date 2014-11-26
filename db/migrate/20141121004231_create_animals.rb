@@ -9,7 +9,7 @@ class CreateAnimals < ActiveRecord::Migration
       t.string :ideal_home
       t.string :species
       t.string :gender
-      t.boolean :child_friendly
+      t.string :child_friendly
       t.text :image
       t.timestamps
     end

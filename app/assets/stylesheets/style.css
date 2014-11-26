@@ -49,9 +49,8 @@ ul {
 } 
 
 div.container {
-/*  padding: 0px;
-  margin: 0px;*/
-  /*max-width: 960px;*/
+  /*width: 100%*/;
+  padding:0;
 }
 
 .navbar-default {
@@ -77,17 +76,12 @@ div.container {
   box-sizing: border-box;
   margin: 20px;
   height: 378px;
+  text-align: center;
 }
 
 .span3 img {
   height: 70px;
   width: 70px;
-}
-
-p img.arrow {
-  height: 70px;
-  width: 70px; 
-  @include animation(bounce 2s infinite); 
 }
 
 .span3 img.donate {
@@ -130,7 +124,11 @@ div.animal-image {
 
 .animal-image .info {
   background-color: rgba(255,255,255,0.8);
-  padding: 1em 0;
+  padding: 2px 0;
+}
+
+h4.animal-name {
+  padding-top: 7px;
 }
 
 .animal-image .info h4 {
@@ -152,6 +150,7 @@ div.animal-image {
   padding-left: 10px; 
   padding-right: 10px;
   padding-bottom: 24px;
+  padding-top: 20px;
 }
 
 ul.dropdown-menu {
@@ -168,8 +167,33 @@ object {
   padding-bottom: 20px;
 }
 
+div.info {
+  text-align:center;
+}
+
+div.animal-image {
+  margin: 10px;
+}
+
+.animal-adopt {
+  padding-top: 20px;
+}
+
+section#services {
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
 .pawswalkbanner img {
-  
+  height: 550px;
+  background-image: url(https://newevolutiondesigns.com/images/freebies/dog-wallpaper-12.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin-bottom: 20px;
 }
 
 

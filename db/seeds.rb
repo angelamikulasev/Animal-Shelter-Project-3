@@ -25,7 +25,7 @@ buddy = Animal.create!(
   ideal_home: 'Big backyard',
   species: 'Dog',
   gender: 'Male',
-  child_friendly: 'true',
+  child_friendly: 'Yes',
   image: 'http://a1.dspnimg.com/data/g/426128089239_2H1pNAoy_g.jpg',
   category_id: Category.where(name: 'Dogs').first.id 
 )
@@ -39,7 +39,7 @@ lily = Animal.create!(
   ideal_home: 'Cosy home',
   species: 'Cat',
   gender: 'Female',
-  child_friendly: 'true',
+  child_friendly: 'Yes',
   image: 'http://a1.dspnimg.com/data/l/3225228245989_68tEtJNp_l.jpg',
   category_id: Category.where(name: 'Cats').first.id
 )
@@ -51,7 +51,7 @@ fluffy = Animal.create!(
   ideal_home: 'Big backyard',
   species: 'Dog',
   gender: 'Female',
-  child_friendly: 'true',
+  child_friendly: 'No',
   image: 'http://www.seniorsandsilkies.org.au/uploads/1/8/7/9/18790170/6302818_orig.jpg',
   category_id: Category.where(name: 'Dogs').first.id 
 )
@@ -63,7 +63,7 @@ bertie = Animal.create!(
   ideal_home: 'Big backyard',
   species: 'Dog',
   gender: 'Male',
-  child_friendly: 'true',
+  child_friendly: 'Yes',
   image: 'http://www.seniorsandsilkies.org.au/uploads/1/8/7/9/18790170/7303565.png?455',
   category_id: Category.where(name: 'Dogs').first.id 
 )
@@ -75,7 +75,7 @@ josie = Animal.create!(
   ideal_home: 'Inside pet',
   species: 'Cat',
   gender: 'Female',
-  child_friendly: 'true',
+  child_friendly: 'No',
   image: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQYogDLugINcBqsrcKs5q2x3vj7CZ4w5mQctcX4vc-OJxbek9ZF5w',
   category_id: Category.where(name: 'Cats').first.id 
 )
