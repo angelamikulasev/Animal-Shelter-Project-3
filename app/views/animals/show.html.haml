@@ -22,8 +22,11 @@
   - if @animal.adopted?
     %h4 This animal under the process of being adopted
   - else
-    = form_for @animal, url: adopt_animal_path(@animal), method: 'patch' do
-      = submit_tag 'Adopt me' 
+    - if current_user 
+      = form_for @animal, url: adopt_animal_path(@animal), method: 'patch' do
+        = submit_tag 'Adopt me'
+    - else
+      = link_to "Log in to adopt", new_session_path
 .col-md-7
   = link_to "Go Back", animals_path
 

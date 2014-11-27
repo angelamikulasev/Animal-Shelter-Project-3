@@ -1,7 +1,7 @@
 body {
   font-family: helvetica;
   margin: 0px;
-  font-size: 12px
+  font-size: 12px;
 }
 
 h1 {
@@ -219,6 +219,16 @@ section#services {
   width: 40%;
 }
 
+.surrender-animal {
+  border: rgb(203, 200, 200) 1px solid;
+  padding: 32px 50px 39px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
 h3.newuser {
   text-align: center;
 }
@@ -278,6 +288,10 @@ div.login_form form input {
   padding-top: 20px;
 }
 
+.col-md-7 {
+  width: 58.3333333333%;
+  text-align: left;
+}
 
 
 

@@ -1,53 +1,54 @@
-= form_for @animal, :html => {:multipart => true} do |f|
-  - if @animal.errors.any?
-    %ul
-      - @animal.errors.full_messages.each do |msg|
-        %li= msg
+.surrender-animal
+  = form_for @animal, :html => {:multipart => true} do |f|
+    - if @animal.errors.any?
+      %ul
+        - @animal.errors.full_messages.each do |msg|
+          %li= msg
 
-  %div.form-group
-    = f.label :name
-    = f.text_field :name, :autofocus => true, :class => 'form-control'
+    %div.form-group
+      = f.label :name
+      = f.text_field :name, :autofocus => true, :class => 'form-control'
 
-  %div.form-group
-    = f.label :about_me
-    = f.text_field :about_me, :class => 'form-control'
+    %div.form-group
+      = f.label :about_me
+      = f.text_field :about_me, :class => 'form-control'
 
-  %div.form-group
-    = f.label :species
-    %p
-    = f.collection_select(:species, Animal::SPECIES, :value, :text)
+    %div.form-group
+      = f.label :species
+      %p
+      = f.collection_select(:species, Animal::SPECIES, :value, :text)
 
-  %div.form-group
-    = f.label :breed
-    = f.text_field :breed, :class => 'form-control'
+    %div.form-group
+      = f.label :breed
+      = f.text_field :breed, :class => 'form-control'
 
-  %div.form-group
-    = f.label :gender
-    %p.gender
-      = f.label "Male"
-      = f.radio_button :gender, "Male", value: 'checked', :class => 'form-control' 
+    %div.form-group
+      = f.label :gender
+      %p.gender
+        = f.label "Male"
+        = f.radio_button :gender, "Male", value: 'checked', :class => 'form-control' 
 
-      = f.label "Female"
-      = f.radio_button :gender, "Female", :class => 'form-control' 
-  %div.form-group
-    = f.label :ideal_home
-    = f.text_field :ideal_home, :class => 'form-control'
+        = f.label "Female"
+        = f.radio_button :gender, "Female", :class => 'form-control' 
+    %div.form-group
+      = f.label :ideal_home
+      = f.text_field :ideal_home, :class => 'form-control'
 
-  %div.form-group
-    = f.label :child_friendly
-    %p.child-friendly
-      = f.label "Yes"
-      = f.radio_button :child_friendly, "Yes", value: 'true', :class => 'form-control'
+    %div.form-group
+      = f.label :child_friendly
+      %p.child-friendly
+        = f.label "Yes"
+        = f.radio_button :child_friendly, "Yes", value: 'true', :class => 'form-control'
 
-      = f.label "No"
-      = f.radio_button :child_friendly, "No", value: 'false', :class => 'form-control'
+        = f.label "No"
+        = f.radio_button :child_friendly, "No", value: 'false', :class => 'form-control'
 
-  %div.form-group
-    = f.label :image
-    = f.file_field :image
-    = f.hidden_field :image_cache
-    = f.text_field :remote_image_url
+    %div.form-group
+      = f.label :image
+      = f.file_field :image
+      = f.hidden_field :image_cache
+      = f.text_field :remote_image_url
 
 
-  %label
-  = f.submit
+    %label
+    = f.submit
