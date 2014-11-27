@@ -13,13 +13,13 @@
     = f.text_field :about_me, :class => 'form-control'
 
   %div.form-group
-
-    / %select{ :name => "animal[species]" }
-    /   %option{:species => "Cat"}= "Cat"
-    /   %option{:species => "animal[species]"}= "Dog" # 'animal[species]',"Dog", :class => 'form-control'
-    /   %option{:species => "animal[species]"}= "Other" # 'animal[species]',"Other", :class => 'form-control'
     = f.label :species
-    = f.text_field :species, :class => 'form-control'
+    %p
+    = f.collection_select(:species, Animal::SPECIES, :value, :text)
+
+  %div.form-group
+    = f.label :breed
+    = f.text_field :breed, :class => 'form-control'
 
   %div.form-group
     = f.label :gender

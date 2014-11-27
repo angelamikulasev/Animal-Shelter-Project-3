@@ -26,12 +26,17 @@ class Animal < ActiveRecord::Base
   belongs_to :adoptee, class_name: "User" # , primary_key: "adoptee_id"
   belongs_to :adopter, class_name: "User" # , primary_key: "adopter_id"
 
+  SPECIES = [
+    OpenStruct.new(value: "Dog", text: "Dog"),
+    OpenStruct.new(value: "Cat", text: "Cat")
+  ]
+
   validates :name, presence: true
   validates :about_me, presence: true
   validates :ideal_home, presence: true
 
-  SPECIES = %w[Dog Cat Other]
-  validates :species, inclusion: { in: SPECIES }
+  # SPECIES = %w[Dog Cat]
+  # validates :species, inclusion: { in: SPECIES }
 
   GENDER = %w[Male Female]
   validates :gender, inclusion: { in: GENDER }
