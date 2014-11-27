@@ -1,11 +1,18 @@
-- if flash[:error]
-  #error_explanation
-    %h4= flash[:error]
-= form_tag session_path do
-  = label_tag "email"
-  = text_field_tag "session[email]", nil, :autofocus => true
-  = label_tag "password"
-  = password_field_tag "session[password]"
-  %br
-    %label
-    = submit_tag 'Login' 
+.login_form
+  - if flash[:error]
+    #error_explanation
+      %h4= flash[:error]
+  = form_tag session_path do
+    .form-group
+      = label_tag "email"
+      = email_field_tag "session[email]", nil, autofocus: true, class: "form-control"
+    .form-group
+      = label_tag "password"
+      = password_field_tag "session[password]", nil, class: "form-control"
+    .checkbox
+      %label
+        %input{type: "checkbox"} Remember me
+
+      = button_tag 'Login', class: 'btn btn-primary'
+
+
