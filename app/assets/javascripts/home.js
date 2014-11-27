@@ -1,6 +1,6 @@
 $(document).ready (function () {
     $('.carousel-inner').hide().fadeIn(3000);
-    $('.span3').hide().fadeIn(3000);
+    $('.span3').hide().fadeIn(1000);
     $('.pawswalkbanner').hide().fadeIn(2000);
 
     $('.animal-image').hover(function () {
@@ -14,5 +14,6 @@ $(document).ready (function () {
         }, 500);
         $('animal-info').addClass('hide');
     });
+
 });
 
