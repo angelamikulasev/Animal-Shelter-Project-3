@@ -3,10 +3,9 @@
   %article
   - @user.adoptions.each do |animal|
     %h2= link_to animal.name, animal
-    %h3= animal.gender
     %p= animal.about_me
 - else
   %p There are no animals to display.
 
 =link_to 'Edit Profile', edit_user_path(@user)
-/ =link_to 'Delete', @user, :method => :delete, :data => { :confirm => "Are you sure #{ @user.firstname" } }
+/ =link_to 'Edit surrendered animal information', edit_animal_path(@animal)
