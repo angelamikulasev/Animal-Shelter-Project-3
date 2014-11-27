@@ -13,7 +13,6 @@ feature 'User signs up' do
     fill_in 'user[password]', with: 'chicken'
     click_button 'Create User'
 
-
     expect(page).to have_content('Sign out')
     expect(page).to have_content("Welcome to Animal Rescue #{ firstname }")
   end
