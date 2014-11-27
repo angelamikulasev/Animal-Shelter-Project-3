@@ -1,5 +1,5 @@
 class AnimalsController < ApplicationController
-  # before_filter :authorize, only: [:adopt]
+  before_filter :authorize, only: [:new, :create, :adopt]
 
   def new
     @animal = current_user.surrenders.new
@@ -32,13 +32,9 @@ class AnimalsController < ApplicationController
   def adopt
     @animal = Animal.find params[:id]
 
-    if @animal.adopt! current_user
-      redirect_to @animal, notice: 'Animal successfully adopted'
-    elsif
-      redirect_to @animal, notice: 'Animal could not be adopted'
-    else
-      redirect_to new_session_path
-    end
+    @animal.adopt! current_user
+
+    redirect_to @animal, notice: 'Animal successfully adopted'  
   end
 
   def waiting_for_adoption
