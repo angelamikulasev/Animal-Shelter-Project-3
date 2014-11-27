@@ -195,26 +195,43 @@ section#services {
   margin-bottom: 20px;
 }
 
+
+
 .login_form {
   border: rgb(203, 200, 200) 1px solid;
   text-align: center;
-  padding: 58px 10px;
+  padding: 10px 50px 70px;
   border-radius: 10px;
-  position: static;
+  /* position: static; */
+  margin-left: auto;
+  margin-right: auto; 
+  width: 40%;
+}
+
+.signupform {
+  border: rgb(203, 200, 200) 1px solid;
+  text-align: center;
+  padding: 32px 50px 39px;
+  margin-bottom: 40px;
+  border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
+}
+
+h3.newuser {
+  text-align: center;
 }
 
 .animals-index-heading {
   text-align: center;
 }
 
-input{
-  margin:10px;
-  display: block;
-  width: 100%;
-  height: 34px;
+input {
+  margin: 10px;
+  /* display: block; */
+  /* width: 100%; */
+  /* height: 34px; */
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.428571429;
@@ -225,6 +242,11 @@ input{
   border-radius: 4px;
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+div.login_form form input {
+  margin: 10px 10px 10px 0;
+  text-align: center;
 }
 
 .form-control {
@@ -242,6 +264,18 @@ input{
   /*box-shadow: 0; */
   /*-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;*/
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.show-animal-profile {
+  width: 50%;
+}
+
+.show-animal-profile a {
+  margin: 0;
+}
+
+.signuplink {
+  padding-top: 20px;
 }
 
 

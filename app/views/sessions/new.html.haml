@@ -1,4 +1,8 @@
 .login_form
+  .panel-heading
+    .panel-title Sign In
+    %div{:style => "float:right; font-size: 80%; position: relative; top:-10px"}
+
   - if flash[:error]
     #error_explanation
       %h4= flash[:error]
@@ -6,13 +10,18 @@
     .form-group
       = label_tag "email"
       = email_field_tag "session[email]", nil, autofocus: true, class: "form-control"
+
     .form-group
       = label_tag "password"
       = password_field_tag "session[password]", nil, class: "form-control"
-    .checkbox
-      %label
-        %input{type: "checkbox"} Remember me
 
-      = button_tag 'Login', class: 'btn btn-primary'
+    %label
+      .remember_me
+    %input{:type => "checkbox"} Remember me
+    %p
+    = button_tag 'Login', class: 'btn btn-primary'
 
+    .signuplink
+      Don't have an account!
+      = link_to "Sign Up", new_user_path
 

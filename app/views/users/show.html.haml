@@ -1,11 +1,12 @@
 / =@user.firstname
-- if @user.present? && @user.adoptions.any?
-  %article
-  - @user.adoptions.each do |animal|
-    %h2= link_to animal.name, animal
-    %p= animal.about_me
-- else
-  %p There are no animals to display.
+.show-animal-profile
+  - if @user.present? && @user.adoptions.any?
+
+    - @user.adoptions.each do |animal|
+      %h2= link_to animal.name, animal
+      %p= animal.about_me
+  - else
+    %p There are no animals to display.
 
 =link_to 'Edit Profile', edit_user_path(@user)
 / =link_to 'Edit surrendered animal information', edit_animal_path(@animal)
