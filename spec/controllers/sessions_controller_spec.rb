@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe SessionsController, :type => :controller do
   describe 'Login' do
     before do
-      User.create! :firstname => 'Annie', :lastname => 'mik', :email => "annie@annie.com", :password => "chicken" 
+      User.create! :firstname => 'Annie', :lastname => 'mik', :email => "annie@annie.com", :password => "chicken", :password_confirmation => "chicken" 
     end
 
     describe 'let user login if details are valid' do

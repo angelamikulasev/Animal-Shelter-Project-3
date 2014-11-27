@@ -18,7 +18,6 @@ feature 'User adopts animal' do
     expect(page.current_path).to eq waiting_for_adoption_animals_path
 
     click_link 'buddy'
-    # expect(page.current_path).to eq animal_path[:id]
 
     click_button 'Adopt me'
     expect(page).to have_content("Animal successfully adopted")
