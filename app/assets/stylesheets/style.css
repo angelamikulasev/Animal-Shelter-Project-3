@@ -50,6 +50,7 @@ ul {
 div.container {
   /*width: 100%*/;
   padding:0;
+  margin-bottom: 10px;
 }
 
 .navbar-default {
@@ -69,7 +70,7 @@ div.container {
 }
 
 .span3 {
-  width: 280px;
+  width: 252px;
   padding: 20px;
   border: 1px solid #dee0e0;
   box-sizing: border-box;
@@ -122,8 +123,8 @@ div.animal-image {
 }
 
 .animal-image .info {
-  background-color: rgba(255,255,255,0.8);
-  padding: 2px 0;
+  background-color: rgba(255,255,255,0.5);
+  padding: 1px 0;
 }
 
 h4.animal-name {
@@ -271,7 +272,7 @@ div.login_form form input {
   background-image: none;
   border: 1px solid #cccccc;
   border-radius: 4px;
-  /*box-shadow: 0; */
+  box-shadow: none; 
   /*-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;*/
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
@@ -293,12 +294,41 @@ div.login_form form input {
   text-align: left;
 }
 
+.form-group input#animal_image {
+  display: inline;
+}
 
+a.navbar-brand {
+  font-size: 20px;
+}
 
+.faqdog img {
+  width: 50%;
+  float:right;
+}
 
+.inner.cover {
+  padding-top: 57px;
+}
 
+.navbar.navbar-default.navbar-static-top {
+  background-color: rgba(248, 248, 248, 0.6);
+  border-bottom: none;
+  color: black;
+}
 
+.navbar-nav > li > a {
+  color: black;
+}
 
+.navbar-default .navbar-brand {
+  color: #010101;
+}
+
+p.about {
+  padding-top: 20px;
+  font-size: 16px;
+}
 
 
 .animation-target {

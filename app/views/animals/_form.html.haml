@@ -45,9 +45,10 @@
 
     %div.form-group
       = f.label :image
+      %br
       = f.file_field :image
       = f.hidden_field :image_cache
-      = f.text_field :remote_image_url
+      = f.text_field :remote_image_url, :placeholder => "Image Url"
 
 
     %label
