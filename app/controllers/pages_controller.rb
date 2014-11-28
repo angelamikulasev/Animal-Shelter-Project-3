@@ -13,4 +13,8 @@ class PagesController < ApplicationController
 
   def pawswalk
   end
+
+  def donate
+  end
+
 end

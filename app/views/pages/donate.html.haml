@@ -1,0 +1,27 @@
+%h2 Donate
+
+.faqdog
+  %img{:src => "http://www.beenleighfarmsupplies.com.au/eshop/images/C/dog%202.jpg", :alt => ""}/
+
+%p Every day, thousands of pets are counting on us to find them a forever home. We know you can't take them all home, but you can help us keep saving lives and stop the killing of healthy and treatable companion animals in Australia’s pounds.
+
+%p Our not-for-profit organisation empowers pet-loving Australians to adopt more than 5,000 rescue pets every month, and discover the joy of unconditional love a rescue pet brings. That’s saving 5,000+ orphaned pets that may otherwise go unnoticed or, worse still, be euthanised.
+
+%p It costs just $25 to match one of our rescue pets with their new family. 
+%p If you're an animal lover you can save a life.
+
+.donate-page
+  = form_for current_user, :html => {:multipart => true} do |f|
+
+    %div.form-group
+      = f.label :firstname
+      = f.text_field :firstname, :autofocus => true, :class => 'form-control'
+    %div.form-group
+      = f.label :email
+      = f.text_field :email, :class => 'form-control'
+    / %div.form-group
+    /   = f.label :donate
+    /   = f.text_field :donate, :class => 'form-control'
+    %label
+    = f.submit "Donate"
+

@@ -27,4 +27,5 @@ Rails.application.routes.draw do
    get '/contact' => 'pages#contact'
    get '/pawswalk' => 'pages#pawswalk'
    get '/info' => 'pages#info'
+   get '/donate' => 'pages#donate'
 end
