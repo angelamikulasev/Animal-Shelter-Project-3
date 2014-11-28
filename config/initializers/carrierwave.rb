@@ -11,3 +11,7 @@ CarrierWave.configure do |config|
   config.fog_public     = true                                    # optional, defaults to true
   config.fog_attributes = {'Cache-Control'=>"max-age=#{365.day.to_i}"} # optional, defaults to {}
 end
+
+    # :aws_access_key_id      => "AKIAJI37MXCJTIKY2ZFA",                        # required
+    # :aws_secret_access_key  => "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",                        # required
+

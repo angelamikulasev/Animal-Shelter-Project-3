@@ -159,6 +159,14 @@ ul.dropdown-menu {
   list-style: none;
 }
 
+.navbar-nav > li > .dropdown-menu {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  padding-right: 82px;
+  margin-left: 10px;
+  margin-top: -12px;
+}
+
 .carousel-caption {
   font-size: 30px;
 }
@@ -228,6 +236,14 @@ section#services {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
+}
+
+.donate-page {
+  border: rgb(203, 200, 200) 1px solid;
+  padding: 32px 50px 39px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  width: 38%;
 }
 
 h3.newuser {
@@ -312,7 +328,7 @@ a.navbar-brand {
 }
 
 .navbar.navbar-default.navbar-static-top {
-  background-color: rgba(248, 248, 248, 0.6);
+  background-color: rgba(205, 255, 198, 0.6);
   border-bottom: none;
   color: black;
 }
@@ -406,3 +422,91 @@ p.about {
   100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
 }
 
+.clear {
+  clear: both;
+}
+
+.animals-index ul {
+  margin-left: 0;
+  padding: 0;
+}
+
+.animals-index li {
+  display: inline-block;
+  float: left;
+  padding: 5px;
+  width: 33.3333333333333%;
+}
+
+@media (max-width: 900px) {
+
+  .animals-index li {
+    width: 50%;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .animals-index li {
+    width: 100%;
+  }
+
+}
+
+div.animal-image {
+  width: 100%;
+  cursor: pointer;
+  margin: 0;
+}
+
+div.animal_box {
+  width: 100%;
+}
+
+.animal-image .info {
+  height: 100%;
+  opacity: 0;
+  position: relative;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.animal-image:hover .info {
+  opacity: 1;
+}
+
+.animal-image:hover .info p {
+  top: 50%;
+}
+
+.animal-image .info h4 a {
+  color: black;
+}
+
+.animal-image .info p {
+  position: absolute;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 80%;
+  left: 10%;
+  font-size: 24px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+@media (max-width: 767px) {
+  ul.nav.navbar-nav {
+    margin: 0;
+  }
+}
